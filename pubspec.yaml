@@ -12,11 +12,11 @@ dependencies:
 flutter:
   plugin:
     platforms:
-      android:
-        package: com.transistorsoft.flutter.backgroundgeolocation
-        pluginClass: FLTBackgroundGeolocationPlugin
       ios:
         pluginClass: TSBackgroundGeolocationPlugin
+      # android:
+      #   package: com.transistorsoft.flutter.backgroundgeolocation
+      #   pluginClass: FLTBackgroundGeolocationPlugin
 
 environment:
   sdk: '>=2.12.0 <4.0.0'
