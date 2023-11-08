@@ -31,12 +31,7 @@ void backgroundGeolocationHeadlessTask(bg.HeadlessEvent headlessEvent) async {
       try {
         bg.Location location =
             await bg.BackgroundGeolocation.getCurrentPosition(
-                samples: 1,
-                extras: {
-                  "event": "terminate",
-                  "headless": true
-                }
-            );
+                samples: 1, extras: {"event": "terminate", "headless": true});
         print("[getCurrentPosition] Headless: $location");
       } catch (error) {
         print("[getCurrentPosition] Headless ERROR: $error");
@@ -45,14 +40,11 @@ void backgroundGeolocationHeadlessTask(bg.HeadlessEvent headlessEvent) async {
       break;
     case bg.Event.HEARTBEAT:
       try {
-        bg.Location location = await bg.BackgroundGeolocation.getCurrentPosition(
-          samples: 2,
-          timeout: 10,
-          extras: {
-            "event": "heartbeat",
-            "headless": true
-          }
-        );
+        bg.Location location =
+            await bg.BackgroundGeolocation.getCurrentPosition(
+                samples: 2,
+                timeout: 10,
+                extras: {"event": "heartbeat", "headless": true});
 
         print('[getCurrentPosition] Headless: $location');
       } catch (error) {
@@ -124,14 +116,9 @@ void backgroundFetchHeadlessTask(HeadlessTask task) async {
 
   try {
     var location = await bg.BackgroundGeolocation.getCurrentPosition(
-	    samples: 2,
-      extras: {
-        "event": "background-fetch",
-        "headless": true
-      }
-    );
+        samples: 2, extras: {"event": "background-fetch", "headless": true});
     print("[location] $location");
-  } catch(error) {
+  } catch (error) {
     print("[location] ERROR: $error");
   }
 

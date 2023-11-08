@@ -77,7 +77,6 @@ class _RegistrationViewState extends State<RegistrationView> {
     bg.BackgroundGeolocation.setConfig(
         bg.Config(transistorAuthorizationToken: token));
 
-
     Map result = {"orgname": _orgname, "username": _username};
     Navigator.pop(context, result);
   }
@@ -113,11 +112,11 @@ class _RegistrationViewState extends State<RegistrationView> {
           iconTheme: IconThemeData(color: Colors.black),
           actions: <Widget>[
             TextButton(
-                onPressed: _onClickSave,
-                child: Text("REGISTER",
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold, color: Colors.blue)),
-                )
+              onPressed: _onClickSave,
+              child: Text("REGISTER",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold, color: Colors.blue)),
+            )
           ]),
       body: Form(
         key: _formKey,
