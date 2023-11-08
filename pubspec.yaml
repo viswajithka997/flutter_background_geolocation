@@ -10,7 +10,7 @@ dependencies:
   collection: ^1.15.0
   background_fetch:
     git:
-      url: https://github.com/transistorsoft/flutter_background_fetch.git
+      url: https://github.com/viswajithka997/flutter_background_fetch.git
 
 flutter:
   plugin:
