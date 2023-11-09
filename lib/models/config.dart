@@ -2473,18 +2473,18 @@ class Config {
         (notificationLargeIcon != null)) {
       print(
           '[background_geolocation] WARNING: Config.notification* fields (eg: notificationTexdt) are all deprecated in favor of new Notification(title: "My Title", text: "My Text") instance.  See docs for Notification class');
-      notification = Notification(
-          text: notificationText,
-          title: notificationTitle,
-          color: notificationColor,
-          channelName: notificationChannelName,
-          smallIcon: notificationSmallIcon,
-          largeIcon: notificationLargeIcon,
-          priority: notificationPriority);
-      config['notification'] = notification!.toMap();
+      // notification = Notification(
+      //     text: notificationText,
+      //     title: notificationTitle,
+      //     color: notificationColor,
+      //     channelName: notificationChannelName,
+      //     smallIcon: notificationSmallIcon,
+      //     largeIcon: notificationLargeIcon,
+      //     priority: notificationPriority);
+      // config['notification'] = notification!.toMap();
     }
 
-    return config;
+    // return config;
   }
 
   /// __@deprecated__: Use [transistorAuthorizationToken]
