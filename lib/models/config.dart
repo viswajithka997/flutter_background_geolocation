@@ -1152,7 +1152,7 @@ class Config {
   ///
   /// [![Foo](https://dl.dropbox.com/s/1k3b2nyvfzsf5h7/debug-sound-fx.png?dl=1)](https://www.transistorsoft.com/docs/background-geolocation-debug-sounds)
   ///
-  bool? debug;
+  bool debug = false;
 
   /// Controls the volume of recorded events in the plugin's logging database.
   ///
@@ -2124,7 +2124,7 @@ class Config {
       this.schedule,
       this.scheduleUseAlarmManager,
       // Logging & Debug
-      this.debug,
+      this.debug = false,
       this.logLevel,
       this.logMaxDays,
       this.reset,
@@ -2328,7 +2328,7 @@ class Config {
       config['scheduleUseAlarmManager'] = scheduleUseAlarmManager;
     }
     // Logging & Debug
-    if (debug != null) {
+    if (debug != false) {
       config['debug'] = debug;
     }
     if (logLevel != null) {

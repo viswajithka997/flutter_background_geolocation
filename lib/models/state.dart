@@ -106,7 +106,7 @@ class State extends Config {
             heartbeatInterval: _ensureInt(data['heartbeatInterval']),
             schedule: data['schedule'].cast<String>(),
             // Logging & Debug
-            debug: _ensureBool(data['debug']),
+            debug: data['debug'] ?? false,
             logLevel: data['logLevel'],
             logMaxDays: data['logMaxDays'],
             ////
