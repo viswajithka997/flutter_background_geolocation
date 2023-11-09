@@ -106,7 +106,7 @@ class State extends Config {
             heartbeatInterval: _ensureInt(data['heartbeatInterval']),
             schedule: data['schedule'].cast<String>(),
             // Logging & Debug
-            debug: data['debug'] ?? false,
+            debug: false,
             logLevel: data['logLevel'],
             logMaxDays: data['logMaxDays'],
             ////
@@ -178,6 +178,6 @@ class State extends Config {
 
   /// Return String representation of `State` for `print` to log.
   String toString() {
-    return '[State enabled: $enabled, isMoving: $isMoving, trackingMode: $trackingMode, desiredAccuracy: $desiredAccuracy, distanceFilter: $distanceFilter, odometer: $odometer, schedulerEnabled: $schedulerEnabled, foregroundService: $foregroundService]';
+    return '[State enabled: $enabled, isMoving: $isMoving, trackingMode: $trackingMode, debug:false, desiredAccuracy: $desiredAccuracy, distanceFilter: $distanceFilter, odometer: $odometer, schedulerEnabled: $schedulerEnabled, foregroundService: $foregroundService]';
   }
 }
