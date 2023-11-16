@@ -395,7 +395,7 @@ class Config {
   ///
   /// Location-services **will never turn OFF** if you set this to **`true`**!  It will be purely up to you or the user to execute [BackgroundGeolocation.changePace]:false or [BackgroundGeolocation.stop] to turn off location-services.
   ///
-  bool? disableStopDetection;
+  bool disableStopDetection = true;
 
   /// Automatically [BackgroundGeolocation.stop] when the [stopTimeout] elapses.
   ///
@@ -2094,7 +2094,7 @@ class Config {
       this.stopTimeout,
       this.activityRecognitionInterval,
       this.minimumActivityRecognitionConfidence,
-      this.disableStopDetection,
+      this.disableStopDetection = true,
       this.stopOnStationary,
       // HTTP & Persistence
       this.url,
@@ -2244,7 +2244,7 @@ class Config {
       config['minimumActivityRecognitionConfidence'] =
           minimumActivityRecognitionConfidence;
     }
-    if (disableStopDetection != null) {
+    if (disableStopDetection != true) {
       config['disableStopDetection'] = disableStopDetection;
     }
     if (stopOnStationary != null) {
@@ -2483,6 +2483,7 @@ class Config {
       //     priority: notificationPriority);
       // config['notification'] = notification!.toMap();
     }
+    return null;
 
     // return config;
   }

@@ -73,7 +73,7 @@ class State extends Config {
                 _ensureInt(data['activityRecognitionInterval']),
             minimumActivityRecognitionConfidence:
                 data['minimumActivityRecognitionConfidence'],
-            disableStopDetection: _ensureBool(data['disableStopDetection']),
+            disableStopDetection: true,
             stopOnStationary: _ensureBool(data['stopOnStationary']),
             // HTTP & Persistence
             url: data['url'],

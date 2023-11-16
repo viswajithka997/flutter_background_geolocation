@@ -605,7 +605,6 @@ class _SettingsViewState extends State<SettingsView> {
                 .catchError(onFailure);
           }
         };
-        break;
       default:
         return (String? value) {
           bg.Config config = new bg.Config();
@@ -751,7 +750,7 @@ const PLUGIN_SETTINGS = {
       'dataType': 'boolean',
       'inputType': 'toggle',
       'values': [true, false],
-      'defaultValue': false
+      'defaultValue': true
     },
     // HTTP & Persistence
     {
